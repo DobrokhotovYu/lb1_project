@@ -197,8 +197,7 @@ The Kunitz domain is distributed across a single-to-many-domain architecture (29
 
 ## Author
 
-**Iurii. Dobrokhotov** — Laboratory of Bioinformatics 1, University of Bologna.
-
+**Iurii Dobrokhotov** 
 ## License
 
 See [`LICENSE`](LICENSE). Data derived from RCSB PDB and UniProtKB/Swiss-Prot remains subject to their respective terms.
