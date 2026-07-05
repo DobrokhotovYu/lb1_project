@@ -62,7 +62,7 @@ lb1_project/
 ├── set1.{ids,tbl,log,fasta.gz}                  # CV fold 1
 ├── set2.{ids,tbl,log,fasta.gz}                  # CV fold 2
 │
-├── swissprot_all.fasta.part-a{a,b}              # whole-DB scan input (split)
+├── swissprot_all.fasta.part-a{a,b}              # whole-DB scan input (split for GitHub size limit)
 ├── swissprot_scan.{tbl,log}                     # whole-DB scan output
 ├── unannotated_hits.tsv                         # predicted-but-unannotated hits
 │
@@ -70,8 +70,8 @@ lb1_project/
 ├── errors_vs_threshold.{pdf,png}
 ├── kunitz_score_distribution.{pdf,png}
 │
-├── environment.yml                              # conda environment  (to add)
-├── LICENSE                                       # (to add)
+├── environment.yml                              # conda environment
+├── LICENSE                                      # license
 └── README.md
 ```
 
@@ -197,12 +197,8 @@ The Kunitz domain is distributed across a single-to-many-domain architecture (29
 
 ## Author
 
-**Yu. Dobrokhotov** — Laboratory of Bioinformatics 1, University of Bologna.
+**Iurii. Dobrokhotov** — Laboratory of Bioinformatics 1, University of Bologna.
 
 ## License
 
 See [`LICENSE`](LICENSE). Data derived from RCSB PDB and UniProtKB/Swiss-Prot remains subject to their respective terms.
-
-## Acknowledgements
-
-Project supervised by Prof. Emidio Capriotti (FaBiT, University of Bologna).
