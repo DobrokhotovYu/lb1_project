@@ -1,0 +1,30 @@
+# Conda environment for the BPTI/Kunitz HMM pipeline
+# Create with:   conda env create -f environment.yml
+# Activate with: conda activate kunitz
+#
+# NOTE: PDBeFold (structural alignment) is a web server, not a package,
+#       and is therefore not listed here.
+
+name: kunitz
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # --- core ---
+  - python=3.11
+
+  # --- sequence / profile-HMM tools ---
+  - hmmer=3.4          # hmmbuild, hmmsearch
+  - blast=2.16         # makeblastdb, blastp (leakage removal)
+  - cd-hit=4.8.1       # redundancy reduction (primary)
+  - mmseqs2            # redundancy reduction (cross-check)
+  - seqkit             # FASTA manipulation, shuffling, splitting
+
+  # --- structure handling ---
+  - pdb-tools          # pdb_fetch, pdb_selchain, pdb_delhetatm, pdb_selaltloc, pdb_tidy
+  # --- analysis / plotting ---
+  - matplotlib         # figures (MCC, error curves, score distribution)
+  - pip
