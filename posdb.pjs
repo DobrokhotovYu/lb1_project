@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "posdb",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "positives_all.fasta",
+  "number-of-letters": 74311,
+  "number-of-sequences": 368,
+  "last-updated": "2026-07-05T18:42:00",
+  "number-of-volumes": 1,
+  "bytes-total": 291434,
+  "bytes-to-cache": 77720,
+  "files": [
+    "posdb.pdb",
+    "posdb.phr",
+    "posdb.pin",
+    "posdb.pot",
+    "posdb.psq",
+    "posdb.ptf",
+    "posdb.pto"
+  ]
+}

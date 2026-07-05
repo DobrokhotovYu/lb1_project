@@ -1,0 +1,190 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  kunitz_kd.hmm
+# target sequence database:        representatives.fasta
+# Max sensitivity mode:            on [all heuristic filters off]
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       seed  [M=58]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.8e-32   99.8   6.1    4.1e-32   99.7   6.1    1.0  1  1kth_A    
+    2.3e-31   97.3   4.3    2.5e-31   97.2   4.3    1.0  1  4u32_X    
+    5.4e-31   96.1   5.9    5.7e-31   96.1   5.9    1.0  1  1g6x_A    
+    8.6e-31   95.5   5.5    9.3e-31   95.4   5.5    1.0  1  1fak_I    
+    1.1e-30   95.1   6.2    1.2e-30   95.0   6.2    1.0  1  4iso_B    
+    1.2e-30   95.1   6.2    1.3e-30   94.9   6.2    1.0  1  1zr0_B    
+    1.8e-30   94.4   9.7      2e-30   94.3   9.7    1.0  1  4dtg_K    
+    2.1e-30   94.2   7.0    2.4e-30   94.0   7.0    1.0  1  1aap_A    
+    2.6e-26   81.1   4.2    3.1e-26   80.9   4.2    1.0  1  4u30_X    
+    4.5e-24   74.0   0.0    4.7e-24   73.9   0.0    1.0  1  1yld_B    
+    1.1e-20   63.1   0.0    1.2e-20   63.0   0.0    1.0  1  3wny_A    
+      1e-18   56.8   0.0    1.1e-18   56.8   0.0    1.0  1  5jb7_C    
+
+
+Domain annotation for each sequence (and alignments):
+>> 1kth_A  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.7   6.1   4.1e-32   4.1e-32       2      57 ..       2      57 ..       1      58 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 99.7 bits;  conditional E-value: 4.1e-32
+    seed  2 edfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvCee 57
+            +d+C+lpkdeG+CR++il++yyd++++sC+rF+YGGC+gn+N+f s++eC+kvC++
+  1kth_A  2 TDICKLPKDEGTCRDFILKWYYDPNTKSCARFWYGGCGGNENKFGSQKECEKVCAP 57
+            79****************************************************86 PP
+
+>> 4u32_X  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.2   4.3   2.5e-31   2.5e-31       2      55 ..       2      55 .]       1      55 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 97.2 bits;  conditional E-value: 2.5e-31
+    seed  2 edfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvC 55
+            +dfCl++k++G+CRa+++r++y++++gsCq FvYGGC+gn+Nn+ ++eeC k+C
+  4u32_X  2 HDFCLVSKVVGRCRASMPRWWYNVTDGSCQLFVYGGCDGNSNNYLTKEECLKKC 55
+            59**************************************************** PP
+
+>> 1g6x_A  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.1   5.9   5.7e-31   5.7e-31       1      57 [.       1      57 [.       1      58 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 96.1 bits;  conditional E-value: 5.7e-31
+    seed  1 aedfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvCee 57
+            ++dfCl+p+++G+CRa i+ry+y+ak+g Cq+FvYGGC++++Nnf+s+e+C ++C++
+  1g6x_A  1 RPDFCLEPPYAGACRARIIRYFYNAKAGLCQTFVYGGCRAKRNNFKSAEDCLRTCGG 57
+            58*****************************************************85 PP
+
+>> 1fak_I  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.4   5.5   9.3e-31   9.3e-31       2      55 ..       2      55 .]       1      55 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 95.4 bits;  conditional E-value: 9.3e-31
+    seed  2 edfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvC 55
+            +dfCl+p+++GpCRal+lry+y+ak+g Cq+F+YGGC +++Nnfes+e+C+++C
+  1fak_I  2 PDFCLEPPYDGPCRALHLRYFYNAKAGLCQTFYYGGCLAKRNNFESAEDCMRTC 55
+            8***************************************************** PP
+
+>> 4iso_B  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.0   6.2   1.2e-30   1.2e-30       2      57 ..       3      58 ..       2      59 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.0 bits;  conditional E-value: 1.2e-30
+    seed  2 edfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvCee 57
+            ed+Cl+++++G+CR++++r+yyd++e+ C++FvYGGC gnkNn+ +eeeC  +C++
+  4iso_B  3 EDYCLASNKVGRCRGSFPRWYYDPTEQICKSFVYGGCLGNKNNYLREEECILACRG 58
+            8*****************************************************86 PP
+
+>> 1zr0_B  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.9   6.2   1.3e-30   1.3e-30       3      57 ..       7      61 ..       5      62 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 94.9 bits;  conditional E-value: 1.3e-30
+    seed  3 dfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvCee 57
+            ++Cllp d+GpCRal+lryyyd++++sC++F+YGGCegn+Nnf+++e+C+++C++
+  1zr0_B  7 EICLLPLDYGPCRALLLRYYYDRYTQSCRQFLYGGCEGNANNFYTWEACDDACWR 61
+            69***************************************************97 PP
+
+>> 4dtg_K  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.3   9.7     2e-30     2e-30       1      57 [.       3      59 ..       3      60 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 94.3 bits;  conditional E-value: 2e-30
+    seed  1 aedfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvCee 57
+            ++dfC+l++d G+CR++i+ry+y++++++C+rF+YGGC gn+Nnfe+ eeCk++Ce+
+  4dtg_K  3 KPDFCFLEEDPGICRGYITRYFYNNQTKQCERFKYGGCLGNMNNFETLEECKNICED 59
+            58*****************************************************86 PP
+
+>> 1aap_A  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.0   7.0   2.4e-30   2.4e-30       3      56 ..       3      56 ..       2      58 .] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 94.0 bits;  conditional E-value: 2.4e-30
+    seed  3 dfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvCe 56
+            ++C++++++GpCRa+i+r+y+d++eg+C+ F+YGGC+gn+Nnf++ee+C++vC+
+  1aap_A  3 EVCSEQAETGPCRAMISRWYFDVTEGKCAPFFYGGCGGNRNNFDTEEYCMAVCG 56
+            49***************************************************7 PP
+
+>> 4u30_X  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.9   4.2   3.1e-26   3.1e-26       5      56 ..       5      57 ..       2      58 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 80.9 bits;  conditional E-value: 3.1e-26
+    seed  5 Cl.lpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvCe 56
+            C+ lp ++GpCRa+i+ + +da +g+C  F YGGC+gn N+f+se+eC+++C+
+  4u30_X  5 CAnLPIVRGPCRAFIQLWAFDAVKGKCVLFPYGGCQGNGNKFYSEKECREYCG 57
+            766999**********************************************6 PP
+
+>> 1yld_B  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.9   0.0   4.7e-24   4.7e-24       1      54 [.       1      54 [.       1      56 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 73.9 bits;  conditional E-value: 4.7e-24
+    seed  1 aedfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkv 54
+            ++df l+p+++GpC+a i+ry+y+a +g  q+FvYGGC++++Nnf+s+e+ +++
+  1yld_B  1 RPDFALEPPYTGPCKARIIRYFYNAPDGLAQTFVYGGCRAKRNNFKSAEDAMRT 54
+            589***********************************************9886 PP
+
+>> 3wny_A  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.0   0.0   1.2e-20   1.2e-20       2      56 ..       2      56 ..       1      58 [. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 63.0 bits;  conditional E-value: 1.2e-20
+    seed  2 edfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvCe 56
+            + fCl+p+++Gp +a i+ry+y+ak+g  q FvYGG ++++Nnf s+ +  ++C+
+  3wny_A  2 PAFCLEPPYAGPGKARIIRYFYNAKAGAAQAFVYGGVRAKRNNFASAADALAACA 56
+            679***************************************************7 PP
+
+>> 5jb7_C  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.8   0.0   1.1e-18   1.1e-18       2      56 ..       2      56 ..       1      58 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 56.8 bits;  conditional E-value: 1.1e-18
+    seed  2 edfCllpkdeGpCRalilryyydakegsCqrFvYGGCegnkNnfeseeeCkkvCe 56
+            + fCl+ +++Gp  a i+ry+y+a +g  q FvYGG  +++Nnf s+ +  ++C+
+  5jb7_C  2 PAFCLEAPYAGPGAAAIIRYFYNAAAGAAQAFVYGGVAAKRNNFASAAAALAACA 56
+            679***************************************************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (58 nodes)
+Target sequences:                         12  (709 residues searched)
+Passed MSV filter:                        12  (1); expected 12.0 (1)
+Passed bias filter:                       12  (1); expected 12.0 (1)
+Passed Vit filter:                        12  (1); expected 12.0 (1)
+Passed Fwd filter:                        12  (1); expected 12.0 (1)
+Initial search space (Z):                 12  [actual number of targets]
+Domain search space  (domZ):              12  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 28.86
+//
+[ok]

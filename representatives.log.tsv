@@ -1,0 +1,15 @@
+cluster	size	representative	resolution	length	default_longest	override	status
+0	1	6bx8_H	1.98	80	6bx8_H	no	FLAGGED_no_canonical_member
+1	9	1aap_A	1.5	58	6har_E	yes	clean
+2	1	4bqd_A	2.48	79	4bqd_A	no	FLAGGED_no_canonical_member
+3	4	4iso_B	2.01	60	1yc0_I	yes	clean
+4	2	4dtg_K	1.8	66	4dtg_K	no	clean
+5	105	1g6x_A	0.86	58	1f7z_I	yes	clean
+6	1	1zr0_B	1.802	63	1zr0_B	no	clean
+7	4	3wny_A	1.3	63	3wny_A	no	clean
+8	1	4u30_X	2.5	59	4u30_X	no	clean
+9	3	1kth_A	0.95	58	1kth_A	no	clean
+10	1	5jb7_C	1.9	58	5jb7_C	no	clean
+11	1	1yld_B	1.7	56	1yld_B	no	clean
+12	1	1fak_I	2.1	55	1fak_I	no	clean
+13	1	4u32_X	1.65	55	4u32_X	no	clean
