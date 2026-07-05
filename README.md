@@ -24,42 +24,54 @@ The Kunitz domain is a compact (~58-residue), cysteine-rich serine-protease-inhi
 ## 🗂️ Repository Structure
 
 ```
-├── scripts/                          # numbered pipeline scripts
-│   ├── 1_import_csv.py               # RCSB CSV report -> kunitz.fasta
-│   ├── 2_select_representatives.py   # length-gate + best-resolution rep selection
-│   ├── 3_fetch_chains.sh             # extract single Kunitz chains from the PDB
-│   ├── 4_positives.sh                # UniProt positive set (reviewed, PF00014)
-│   ├── 5_negatives.sh                # UniProt negative set (reviewed, non-PF00014)
-│   ├── 6_leakage_removal.sh          # remove training proteins from positives
-│   ├── 7_split.sh                    # 2-fold cross-validation split
-│   ├── 8_hmmsearch.sh                # hmmsearch per fold + ground-truth labels
-│   ├── 9_score.py                    # confusion matrix, E-value sweep, CV MCC
-│   ├── plot_mcc.py                   # MCC vs E-value threshold figure
-│   ├── plot_errors.py                # Type I / Type II error figure
-│   ├── 10_swissprot_scan.sh          # hmmsearch vs all Swiss-Prot
-│   ├── 11_swissprot_scan.py          # contingency table + distribution analysis
-│   └── 12_superkunitz.sh             # extreme multi-domain proteins
-├── data/
-│   ├── rcsb_pdb_custom_report.csv    # raw RCSB custom report
-│   ├── kunitz.fasta                  # all 135 candidate chains
-│   ├── kunitz_nr.fasta[.clstr]       # CD-HIT representatives + membership
-│   ├── representatives.{txt,fasta}   # 12 selected representatives
-│   ├── pdbs/                         # extracted single-chain structures
-│   ├── seed.fasta                    # PDBeFold structural alignment (9 domains)
-│   ├── kunitz_kd.hmm                 # trained profile HMM
-│   ├── positives_all.fasta           # 368 PF00014 proteins
-│   ├── positives.fasta               # 353 after leakage removal
-│   ├── negatives_all.fasta           # reviewed non-PF00014 proteins
-│   ├── set{1,2}.{fasta,ids,tbl}      # cross-validation folds
-│   └── swissprot_scan.tbl            # whole-database scan output
-├── results/
-│   ├── representative_selection.pdf
-│   ├── mcc_vs_threshold.pdf
-│   ├── errors_vs_threshold.pdf
-│   ├── kunitz_score_distribution.pdf
-│   └── unannotated_hits.tsv
-├── environment.yml                   # conda environment
-├── LICENSE
+lb1_project/
+├── scripts/                                    # pipeline scripts
+│   ├── 1_import_csv.py                          #   RCSB CSV report -> kunitz.fasta
+│   ├── 2_select_representatives.py             #   length-gate + best-resolution selection
+│   ├── 3_fetch_chains.sh                        #   extract single Kunitz chains
+│   ├── 4_positives.sh   5_negatives.sh          #   UniProt positive / negative sets
+│   ├── 6_leakage_removal.sh                     #   remove training proteins from positives
+│   ├── 7_split.sh                               #   2-fold cross-validation split
+│   ├── 8_hmmsearch.sh                           #   hmmsearch per fold + ground-truth labels
+│   ├── 9_score.py                               #   confusion matrix, E-value sweep, CV MCC
+│   ├── plot_mcc.py   plot_errors.py             #   result figures
+│   ├── 10_swissprot_scan.sh                     #   hmmsearch vs all Swiss-Prot
+│   ├── 11_swissprot_scan.py                     #   contingency table + distribution
+│   └── 12_superkunitz.sh                        #   extreme multi-domain proteins
+├── clustering/                                  # CD-HIT / MMseqs2 outputs
+├── pdbs/                                        # extracted single-chain structures
+├── pos_folds/   neg_folds/                      # 2-fold split FASTA parts
+├── tmp/                                         # scratch (MMseqs2 temp)
+│
+├── rcsb_pdb_custom_report_20260704202953.csv    # raw RCSB report
+├── kunitz.fasta                                 # all 135 candidate chains
+├── representatives.{txt,fasta}                  # 12 selected representatives
+├── representatives.log.tsv                      # selection decision log
+├── PDBeFold_alignment.fasta                     # raw PDBeFold multiple alignment
+├── seed.fasta                                   # curated 9-domain seed alignment
+├── seed_seqs.fasta                              # ungapped seed sequences (for BLAST)
+├── kunitz_kd.hmm                                # trained profile HMM
+├── selfcheck.out                                # consistency-test output
+│
+├── positives_all.fasta                          # 368 PF00014 proteins
+├── positives.fasta                              # 353 after leakage removal
+├── negatives_all.fasta.part-a{a,b}              # negatives (split for GitHub size limit)
+├── seed_vs_pos.tsv   training_ids.txt           # leakage-removal intermediates
+├── posdb.*                                      # BLAST database (leakage removal)
+│
+├── set1.{ids,tbl,log,fasta.gz}                  # CV fold 1
+├── set2.{ids,tbl,log,fasta.gz}                  # CV fold 2
+│
+├── swissprot_all.fasta.part-a{a,b}              # whole-DB scan input (split)
+├── swissprot_scan.{tbl,log}                     # whole-DB scan output
+├── unannotated_hits.tsv                         # predicted-but-unannotated hits
+│
+├── mcc_vs_threshold.{pdf,png}                   # figures
+├── errors_vs_threshold.{pdf,png}
+├── kunitz_score_distribution.{pdf,png}
+│
+├── environment.yml                              # conda environment  (to add)
+├── LICENSE                                       # (to add)
 └── README.md
 ```
 
@@ -185,8 +197,12 @@ The Kunitz domain is distributed across a single-to-many-domain architecture (29
 
 ## Author
 
-**Iurii. Dobrokhotov** 
+**Yu. Dobrokhotov** — Laboratory of Bioinformatics 1, University of Bologna.
 
 ## License
 
 See [`LICENSE`](LICENSE). Data derived from RCSB PDB and UniProtKB/Swiss-Prot remains subject to their respective terms.
+
+## Acknowledgements
+
+Project supervised by Prof. Emidio Capriotti (FaBiT, University of Bologna).
